@@ -9,8 +9,8 @@ using System;
 
 namespace Lab.Migrations
 {
-    [DbContext(typeof(LabContext))]
-    [Migration("20171122132845_InitialCreate")]
+    [DbContext(typeof(CotizacionesContext))]
+    [Migration("20180102173950_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

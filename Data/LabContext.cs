@@ -3,9 +3,9 @@ using Lab.Models;
 
 namespace Lab.Data
 {
-    public class LabContext : DbContext
+    public class CotizacionesContext : DbContext
     {
-        public LabContext(DbContextOptions<LabContext> options) : base(options)
+        public CotizacionesContext(DbContextOptions<CotizacionesContext> options) : base(options)
         {
         }
 

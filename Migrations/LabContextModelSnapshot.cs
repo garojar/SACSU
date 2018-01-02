@@ -9,7 +9,7 @@ using System;
 
 namespace Lab.Migrations
 {
-    [DbContext(typeof(LabContext))]
+    [DbContext(typeof(CotizacionesContext))]
     partial class LabContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
