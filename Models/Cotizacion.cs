@@ -2,7 +2,7 @@ using System.Collections;
 
 namespace Lab.Models{
 
-    public class Cotizaciones
+    public class Cotizacion
     {
         public int ID { get; set; }
 

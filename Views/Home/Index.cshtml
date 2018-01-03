@@ -1,4 +1,7 @@
-﻿@{
+﻿
+
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -18,37 +21,43 @@
                 <label for="Nombre">Nombre:</label>
             </div>
             <div>
-                <input type="text" name="Nombre" value="" />
+                <input type="text" name="Nombre"  />
+                @Html.ValidationMessage("Nombre")
             </div>
             <div>
                 <label for="Paterno">Apellido Paterno:</label>
             </div>
             <div>
-                <input type="text" name="Paterno" value="" />
+                <input type="text" name="Paterno"  />
+                @Html.ValidationMessage("Paterno")
             </div>
             <div>
                 <label for="Materno">Apellido Materno: </label>
             </div>
             <div>
-                <input type="text" name="Materno" value="" />
+                <input type="text" name="Materno"  />
+                @Html.ValidationMessage("Materno")
             </div>
             <div>
                 <label for="Rut">RUT: </label>
             </div>
             <div>
                 <input type="text" name="RUT:" value="" />
+                @Html.ValidationMessage("RUT")
             </div>
             <div>
                 <label for="NombreCotizacion">Nombre de la Cotizacion: </label>
             </div>
             <div>
                 <input type="text" name="NombreCotizacion" value="" />
+                @Html.ValidationMessage("NombreCotizacion")
             </div>
             <div>
                 <label for="Descripcion">Descripcion: </label>
             </div>
             <div>
-                <input type="text" name="Descripcion" value="" />
+                <input type="text" name="Descripcion" style="width: 300px" style="height: 300px" />
+                @Html.ValidationMessage("Descripcion")
             </div>
             <div>
             <label>&nbsp;</label>

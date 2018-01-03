@@ -11,10 +11,11 @@ namespace Lab.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            //SQLITE COMO BACKEND
             optionsBuilder.UseSqlite("Data Source=lab.db");
         }
 
         public DbSet<Persona> Personas { get; set; }
-
+        
     }
 }
