@@ -56,13 +56,18 @@
                 <label for="Descripcion">Descripcion: </label>
             </div>
             <div>
-                <input type="text" name="Descripcion" style="width: 300px" style="height: 300px" />
+                <input type="text" name="Descripcion" style="width: 300px; height: 300px" />
                 @Html.ValidationMessage("Descripcion")
             </div>
             <div>
             <label>&nbsp;</label>
-            <input type="submit" value="Submit" class="submit" />
+            <button type="button" onclick="guardarDB()">Aceptar</button>
           </div>
+          <script>
+            function guardarDB() {
+                document.getElementById("demo").innerHTML = "Hello World";
+            }
+          </script>
         </fieldset>
       </form>
     </body>

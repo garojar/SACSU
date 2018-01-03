@@ -14,7 +14,7 @@ namespace Lab.Models{
 
         public string Estado { get; set; }
 
-        public ArrayList Inventario {get; set ;}   
+        public string Descripcion {get; set ;}   
 
     }   
 }
