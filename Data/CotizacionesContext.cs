@@ -20,7 +20,7 @@ namespace Lab.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Persona>().HasKey(x => x.Rut).HasName("PK_Personas");
+            modelBuilder.Entity<Persona>().HasKey(x => x.Rut);
             base.OnModelCreating(modelBuilder);
         }
     

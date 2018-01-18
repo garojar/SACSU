@@ -1,20 +1,18 @@
-using System.Collections.Generic;
-using Microsoft.AspNetCore.Mvc;
-using Lab.Models;
-using Lab.Data;
-using System.Linq;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-
+using Lab.Data;
+using Lab.Models;
 
 namespace Lab.Controllers
 {
-
     public class PersonaController : Controller
     {
-       private readonly CotizacionesContext _context;
+        private readonly CotizacionesContext _context;
 
         public PersonaController(CotizacionesContext context)
         {
@@ -48,8 +46,6 @@ namespace Lab.Controllers
         // GET: Persona/Create
         public IActionResult Create()
         {
-            ViewData["Message"] = "Consideraciones:";
-            
             return View();
         }
 
@@ -60,8 +56,12 @@ namespace Lab.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Rut,Nombre,Paterno,Materno")] Persona persona)
         {
-            _context.Add(persona);
-            await _context.SaveChangesAsync();
+            if (ModelState.IsValid)
+            {
+                _context.Add(persona);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
             return View(persona);
         }
 
@@ -150,5 +150,4 @@ namespace Lab.Controllers
             return _context.Personas.Any(e => e.Rut == id);
         }
     }
-
 }

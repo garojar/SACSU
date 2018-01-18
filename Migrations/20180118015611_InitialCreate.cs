@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 using System;
 using System.Collections.Generic;
+using Lab.Models;
 
 namespace Lab.Migrations
 {
@@ -15,7 +16,8 @@ namespace Lab.Migrations
                     Rut = table.Column<string>(nullable: false),
                     Materno = table.Column<string>(nullable: true),
                     Nombre = table.Column<string>(nullable: true),
-                    Paterno = table.Column<string>(nullable: true)
+                    Paterno = table.Column<string>(nullable: true),
+                    
                 },
                 constraints: table =>
                 {
