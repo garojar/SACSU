@@ -12,10 +12,17 @@ namespace Lab.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             //SQLITE COMO BACKEND
-            optionsBuilder.UseSqlite("Data Source=lab.db");
+            optionsBuilder.UseSqlite("Data Source=cotizaciones.db");
         }
 
         public DbSet<Persona> Personas { get; set; }
-        
+        public DbSet<Cotizacion> Cotizaciones {get; set;}
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Persona>().HasKey(x => x.Rut).HasName("PK_Personas");
+            base.OnModelCreating(modelBuilder);
+        }
+    
     }
 }

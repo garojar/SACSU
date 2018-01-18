@@ -1,5 +1,6 @@
 using System;
-
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 /// <summary>
 /// Archivo donde se definen las clases del Dominio del problema.
 /// </summary>
@@ -14,15 +15,15 @@ namespace Lab.Models
     /// - No permite valores null en sus atributos.
     /// </remarks>
     public class Persona
-    {
-        public int ID { get; set; }
-
-        public string Rut { get; set; }
+    {   
+        public String Rut { get; set; }
 
         public string Nombre { get; set; }
 
         public string Paterno { get; set; }
 
-        public string Materno { get; set; }    
+        public string Materno { get; set; }   
+
+        public List<Cotizacion> listCotizaciones {get; set;} 
     }
 }
